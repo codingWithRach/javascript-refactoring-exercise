@@ -1,5 +1,5 @@
 function processTransactions(transactions) {
-  let transactionCount = {};
+  const transactionCount = {};
   transactions
     .sort()
     .forEach((transaction) =>
