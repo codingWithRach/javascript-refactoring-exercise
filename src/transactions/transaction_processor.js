@@ -1,13 +1,13 @@
-function processTransactions(transActions) {
-  let txCount = {};
-  transActions
+function processTransactions(transactions) {
+  let transactionCount = {};
+  transactions
     .sort()
     .forEach((transaction) =>
-      txCount[transaction]
-        ? (txCount[transaction] += 1)
-        : (txCount[transaction] = 1)
+      transactionCount[transaction]
+        ? (transactionCount[transaction] += 1)
+        : (transactionCount[transaction] = 1)
     );
-  return Object.entries(txCount)
+  return Object.entries(transactionCount)
     .sort((a, b) => b[1] - a[1])
     .map((element) => element.join(" "));
 }
